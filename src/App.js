@@ -22,7 +22,7 @@ let currentDay=new Date().toLocaleDateString('en-us', { weekday:"long"})
 
               <div className="d-flex justify-content-center">
                 <div className="text-start bg-white border rounded col-6" style={{height: '44px'}}>
-                  <input value={toDo} onChange={(e)=>{setTodo(e.target.value)}} type="text" className="col-10 my-2 ms-1" style={{borderStyle: 'hidden'}} placeholder="Plan something....." />
+                  <input value={toDo} onChange={(e)=>{setTodo(e.target.value)}} type="text" className="col-8 my-2 ms-1 border-0 shadow-none" style={{outline:"none"}} placeholder="Plan something....." />
                   <i onClick={()=>{
                      let date=new Date().toLocaleDateString();
                     setTodos([...toDos,{data:toDo,date:date,status:"todo",id:Date.now()}])}}
